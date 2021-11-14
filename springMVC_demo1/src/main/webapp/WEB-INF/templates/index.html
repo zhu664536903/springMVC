@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>上传文件</div>
+    <form method="POST" action="/user/upload" enctype="multipart/form-data">
+        <input name="filename" type="file" id="file">file
+        <input type="submit">提交</input>
+    </form>
+
+    <div id="json"><button>传入json参数</button></div>
+
+
+</body>
+
+</html>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+    $(function (){
+        var jsonData = {"userName":"zgc","age":2}
+        console.log("aa")
+            $.post({
+                "url":"/user/json",
+                "data":JSON.stringify(jsonData),
+                "contentType":"application/json",
+                "success":function (res) {
+                alert(
+                    res
+                )
+            }})
+
+
+    })
+
+
+
+</script>
