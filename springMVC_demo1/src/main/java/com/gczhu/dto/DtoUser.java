@@ -1,9 +1,11 @@
 package com.gczhu.dto;
 
+import java.util.Date;
+
 public class DtoUser {
     private String userName;
     private String age;
-
+    private Date date = new Date();
     public DtoUser() {
     }
 
@@ -26,6 +28,14 @@ public class DtoUser {
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     @Override

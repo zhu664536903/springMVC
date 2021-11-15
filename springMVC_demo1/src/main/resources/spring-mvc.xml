@@ -22,11 +22,23 @@
                         <value>application/json;charset=UTF-8</value>
                     </list>
                 </property>
-
+                <property name="fastJsonConfig" ref="fastJsonConfig"/>
             </bean>
 
         </mvc:message-converters>
     </mvc:annotation-driven>
+    <!--拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/static/**"/>
+            <bean class="com.gczhu.interceptor.MyInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <bean id="fastJsonConfig" class="com.alibaba.fastjson.support.config.FastJsonConfig">
+        <property name="dateFormat" value="yyyy-MM-dd HH:mm:ss"/>
+    </bean>
+
     <!--thymeleaf模板-->
     <bean id="thymeleafViewResolver" class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
         <property name="order" value="1"/>
