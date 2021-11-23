@@ -66,4 +66,11 @@ public class UserController {
         return new DtoUser("名字","22");
 
     }
+
+    //异常处理
+    @RequestMapping("/exception")
+    @ResponseBody
+    public String exception(){
+        throw new RuntimeException("业务出现异常");
+    }
 }
