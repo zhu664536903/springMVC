@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.gczhu</groupId>
-    <artifactId>springMVC_demo1</artifactId>
+    <groupId>org.example</groupId>
+    <artifactId>springMVC_annotation</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>springMVC_demo1 Maven Webapp</name>
+    <name>springMVC_annotation</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -46,11 +46,11 @@
             <version>3.0.12.RELEASE</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>ch.qos.logback</groupId>-->
-<!--            <artifactId>logback-classic</artifactId>-->
-<!--            <version>1.2.3</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
         <!--文件上传依赖-->
         <dependency>
             <groupId>commons-io</groupId>
@@ -65,11 +65,11 @@
         </dependency>
         <!--接收json参数-->
 
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--            <artifactId>jackson-databind</artifactId>-->
-<!--            <version>2.11.4</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.fasterxml.jackson.core</groupId>-->
+        <!--            <artifactId>jackson-databind</artifactId>-->
+        <!--            <version>2.11.4</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -79,7 +79,7 @@
     </dependencies>
 
     <build>
-        <finalName>springMVC_demo1</finalName>
+        <finalName>springMVC_annotation</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
@@ -93,6 +93,7 @@
                 </configuration>
             </plugin>
         </plugins>
+
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <plugin>
@@ -103,7 +104,6 @@
                 <plugin>
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>3.0.2</version>
-
                 </plugin>
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -116,7 +116,6 @@
                 <plugin>
                     <artifactId>maven-war-plugin</artifactId>
                     <version>3.2.2</version>
-
                 </plugin>
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
